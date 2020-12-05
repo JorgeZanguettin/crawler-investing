@@ -13,7 +13,9 @@ class CrawlerInvesting:
 			self.sendLogToSystem('ERROR', 'Syntax de execução incorreta. Correta : python investing.py "Nome Criptomoeda"')
 			quit()
 
+        self.sendLogToSystem('DEBUG', 'Start Crawler')
 		self.getCritoMoeda(nomeCriptoMoeda)
+        self.sendLogToSystem('DEBUG', 'Finish Crawler')
 
 	def sendLogToSystem(self, type_message, message):
 		print (f'[ {type_message} ] {message}')
